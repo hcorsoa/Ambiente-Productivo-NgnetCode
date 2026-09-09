@@ -1,0 +1,17 @@
+name: Mi Primer Flujo en GitHub
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verificar-codigo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Ejecutar un saludo de prueba
+        run: echo "¡El archivo YAML de GitHub se ejecuto correctamente!"
